@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      <div className="tech-grid absolute inset-0 z-0"></div>
+      <div className="tech-grid absolute inset-0 z-0 opaciy-60"></div>
       
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-10 w-20 h-20 rounded-full bg-hackathon-purple/20 floating-element blur-xl"></div>

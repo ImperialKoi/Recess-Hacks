@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -47,7 +46,7 @@ const faqItems = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
+    <section id="faq" className="py-12 md:py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
@@ -56,23 +55,29 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap gap-4">
             {faqItems.map((item, index) => (
-              <AccordionItem 
+              <div 
                 key={index} 
-                value={`item-${index}`}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 px-6"
+                className="w-full md:w-[calc(50%-0.5rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 relative"
               >
-                <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-foreground/70 pb-4">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <Accordion type="single" collapsible className="h-full">
+                  <AccordionItem 
+                    value={`item-${index}`}
+                    className="bg-white rounded-lg border border-gray-100 px-6 relative before:absolute before:inset-0 before:rounded-lg before:transition-all before:duration-500 before:opacity-0 hover:before:opacity-100 before:bg-blue-800/10 before:-z-10 before:translate-y-4 hover:before:translate-y-2"
+                  >
+                    <AccordionTrigger className="text-lg font-medium py-4 hover:no-underline">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/70 pb-4">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
             ))}
-          </Accordion>
+          </div>
         </div>
       </div>
     </section>
