@@ -37,8 +37,8 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent">
-            Recess Hacks 4.0
-          </h1>
+            Recess Hacks 5.0
+          </h1> 
           
           <p className="text-xl md:text-2xl mb-8 text-foreground/80">
             An international digital hackathon for high school students of all skill levels
