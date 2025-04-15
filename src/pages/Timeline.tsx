@@ -1,9 +1,8 @@
 
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { TracingBeam } from "../components/ui/tracing-beam";
+import Navbar from '@/components/home/Navbar';
+import Footer from '@/components/home/Footer';
 
 type TimelineEvent = {
   title: string;

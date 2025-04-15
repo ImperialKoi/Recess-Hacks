@@ -1,14 +1,15 @@
 
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Logistics from '@/components/Logistics';
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
-import OurTeam from '@/components/OurTeam';
-import Sponsors from '@/components/Sponsors'
-import Stats from '@/components/Stats'
-import FloatingShapes from '@/components/FloatingShapes'
+import Navbar from '@/components/home/Navbar';
+import Hero from '@/components/home/Hero';
+import About from '@/components/home/About';
+import Logistics from '@/components/home/Logistics';
+import FAQ from '@/components/home/FAQ';
+import Footer from '@/components/home/Footer';
+import OurTeam from '@/components/home/OurTeam';
+import Sponsors from '@/components/home/Sponsors'
+import Stats from '@/components/home/Stats'
+import FloatingShapes from '@/components/home/FloatingShapes'
+import Maps from '@/components/home/GoogleMap'
 import { useEffect } from 'react';
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
           <Hero />
           <About />
           <Logistics />
+          <Maps />
           <Stats />
           <Sponsors />
           <FAQ />
