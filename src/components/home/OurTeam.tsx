@@ -9,7 +9,8 @@ const teamMembers = [
   { name: "Emily Zhang", image: "https://i.imgur.com/151617.jpg" },
   { name: "Jason Kim", image: "https://i.imgur.com/181920.jpg" },
   { name: "Karan Patel", image: "https://i.imgur.com/212223.jpg" },
-  { name: "Kevin Nguyen", image: "https://i.imgur.com/242526.jpg" }
+  { name: "Kevin Nguyen", image: "https://i.imgur.com/242526.jpg" },
+  { name: "Kevin Nguyen", image: "https://i.imgur.com/242526.jpg" },
 ];
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
                 onMouseEnter={() => setHoveredMember(member.name)}
                 onMouseLeave={() => setHoveredMember(null)}
               >
-                <div className="aspect-square w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-black transform transition-transform duration-300 group-hover:scale-105">
+                <div className="aspect-square w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full overflow-hidden border-4 border-black transform transition-transform duration-300 group-hover:scale-105">
                   <img
                     src={member.image}
                     alt={member.name}

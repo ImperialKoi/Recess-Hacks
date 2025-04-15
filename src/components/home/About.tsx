@@ -28,14 +28,14 @@ const About = () => {
   return (
     <section id="about" className="py-12 md:py-20 relative">
       <div className="container px-4">
-        <div className='flex flex-row'>
-          <div className="max-w-xl mb-16 text-left ml-20">
-            <h2 className="text-5xl md:text-5xl font-bold mb-6">About Recess Hacks</h2>
+        <div className='flex md:flex-row flex-col'>
+          <div className="max-w-2xl mb-16 text-left left-[3rem] bg-white p-12 rounded-xl">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">About Recess Hacks</h2>
             <p className="text-lg text-foreground/80">
-            Recess Hacks 4.0 is a 48-hour event on August 30th-September 1st (labour day weekend) where students particpate in teams of 1-4 and work together to build innovative projects. Participants will have access to workshops, win fun prizes, learn new skills and - most importantly - have a fun time! Recess Hacks was founded in 2021, making this our 4th iteration. In the past few years, we've had over 500 participants, 20+ sponsors and mulitple dedicated teams. We are a canadian-based hackathon but will also be allowing international participants this year. Anyone attending highschool in the 2024-2025 school year is eligible to apply!
+              Recess Hacks 4.0 is a 48-hour event on August 30th-September 1st (labour day weekend) where students particpate in teams of 1-4 and work together to build innovative projects. Participants will have access to workshops, win fun prizes, learn new skills and - most importantly - have a fun time! Recess Hacks was founded in 2021, making this our 4th iteration. In the past few years, we've had over 500 participants, 20+ sponsors and mulitple dedicated teams. We are a canadian-based hackathon but will also be allowing international participants this year. Anyone highschooler is eligible to apply!
             </p>
           </div>
-          <div className="relative h-[11rem] md:h-[22rem] w-[17rem] md:w-[34rem] rounded-xl overflow-hidden shadow-lg ml-28">
+          <div className="relative w-full h-[20rem] md:h-[26rem] aspect-video rounded-xl overflow-hidden shadow-lg md:ml-28">
             {images.map((image, index) => (
               <div
                 key={index}

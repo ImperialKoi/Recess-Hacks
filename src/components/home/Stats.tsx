@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
 const stats = [
-  { value: 7000, label: "in prizes", prefix: "$", suffix: "+" },
-  { value: 150, label: "hackers", suffix: "+" },
+  { value: 189, label: "in prizes", prefix: "$", suffix: "K+" },
+  { value: 190, label: "hackers", suffix: "+" },
   { value: 30, label: "projects", suffix: "+" },
   { value: 40, label: "schools", suffix: "+" },
   { value: 15, label: "workshops", suffix: "+" }
@@ -52,7 +52,7 @@ const Statistics = () => {
               key={index}
               className="text-center transform transition-transform duration-500 hover:scale-110"
             >
-              <div className="text-5xl font-bold mb-2">
+              <div className="text-3xl md:text-5xl font-bold mb-2">
                 {stat.prefix}{stat.value}{stat.suffix}
               </div>
               <div className="text-xl opacity-80">{stat.label}</div>

@@ -74,7 +74,7 @@ const Navbar = () => {
     <motion.header
       ref={ref}
       className={cn(
-        "fixed w-full z-50 transition-all duration-300", 
+        "fixed w-full z-50 transition-all duration-300 overflow-hidden", 
         isScrolled ? "py-6" : "bg-transparent py-6"
       )}
     >
@@ -82,7 +82,7 @@ const Navbar = () => {
         <NavBody visible={visible}>
           <NavbarLogo />
           <NavItems items={navItems} className="text-slate-700" />
-          <NavbarButton variant="primary" href="/login" className="ml-4">
+          <NavbarButton variant="primary" href="/login" className="overflow-hidden">
             Get Started
           </NavbarButton>
         </NavBody>

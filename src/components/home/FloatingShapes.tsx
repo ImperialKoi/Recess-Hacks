@@ -26,7 +26,7 @@ const FloatingShapes = () => {
     
     // Set canvas size to match window
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
+      canvas.width = window.innerWidth - 15;
       canvas.height = document.body.scrollHeight;
     };
     
@@ -137,7 +137,7 @@ const FloatingShapes = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute inset-0 z-100 pointer-events-none"
+      className="absolute inset-0 z-10 pointer-events-none overflow-hidden"
     />
   );
 };
