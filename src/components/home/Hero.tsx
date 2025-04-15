@@ -2,9 +2,18 @@
 import { ArrowRight, Calendar, Globe, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [daysLeft, setDaysLeft] = useState(0);
+  const navigate = useNavigate();
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   
   useEffect(() => {
     const calculateDaysLeft = () => {
@@ -71,11 +80,11 @@ const Hero = () => {
           )}
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-hackathon-purple to-hackathon-blue hover:from-hackathon-purple-dark hover:to-hackathon-blue-dark text-white font-medium group">
+            <Button size="lg" className="bg-gradient-to-r from-hackathon-purple to-hackathon-blue hover:from-hackathon-purple-dark hover:to-hackathon-blue-dark text-white font-medium group" onClick={() => navigate("/login")}>
               Register Now
               <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-hackathon-purple/30 text-foreground hover:bg-hackathon-purple/5">
+            <Button size="lg" variant="outline" className="border-hackathon-purple/30 text-foreground hover:bg-hackathon-purple/5" onClick={scrollToAbout}>
               Learn More
             </Button>
           </div>

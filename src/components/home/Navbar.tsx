@@ -62,9 +62,11 @@ const Navbar = () => {
   
   const navItems = [
     { name: "About", link: "/#about" },
+    { name: "Location", link: "/#location" },
     { name: "Schedule", link: "/schedule" },
+    { name: "Stats", link: "/#stats" },
     { name: "Sponsors", link: "/#sponsors" },
-    { name: "Team", link: "/#team" },
+    { name: "Team", link: "/#teams" },
     { name: "FAQ", link: "/#faq" }
   ];
 
@@ -80,7 +82,7 @@ const Navbar = () => {
         <NavBody visible={visible}>
           <NavbarLogo />
           <NavItems items={navItems} className="text-slate-700" />
-          <NavbarButton variant="primary" href="/#contact" className="ml-4">
+          <NavbarButton variant="primary" href="/login" className="ml-4">
             Get Started
           </NavbarButton>
         </NavBody>

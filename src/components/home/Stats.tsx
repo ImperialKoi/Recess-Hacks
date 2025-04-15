@@ -40,7 +40,7 @@ const Statistics = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-transparent text-purple-900">
+    <section className="py-20 bg-transparent text-purple-900" id='stats'>
       <div className="container mx-auto px-4">
         <h2 className="text-6xl font-bold text-center mb-20">
           Last year, we had...

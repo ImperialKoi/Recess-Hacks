@@ -103,6 +103,10 @@
   @apply animate-float;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .tech-grid {
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),

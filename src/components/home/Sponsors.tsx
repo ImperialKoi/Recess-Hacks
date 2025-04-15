@@ -41,7 +41,7 @@ const sponsors = [
 
 const Sponsors = () => {
   return (
-    <section className="py-16 bg-transparent">
+    <section className="py-16 bg-transparent" id='sponsors'>
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Our Sponsors</h2>
         
