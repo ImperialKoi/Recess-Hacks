@@ -20,7 +20,7 @@ import { headers } from "next/headers";
 import { render } from "@react-email/components";
 import { VerifyEmailTemplate } from "@/lib/emails/verify-email";
 import { cookies } from "next/headers";
-import { verify } from "@node-rs/argon2";
+import bcrypt from "bcryptjs";
 import { createSession, invalidateSession } from "@/lib/sessions";
 import { loginSchema, resetPasswordSchema, signUpSchema } from "../validation";
 import ResetPasswordTemplate from "@/lib/emails/reset-password";
@@ -71,7 +71,7 @@ export const loginWithEmail = async (prevState: any, formData: FormData) => {
             return {error: "Invalid email or password"};
         }
 
-        const passwordMatches = await verify(user.password, password);
+        const passwordMatches = await bcrypt.compare(user.password, password);
         if (!passwordMatches) {
             return {error: "Invalid email or password"};
         }

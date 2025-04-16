@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../../public/Manrope-VariableFont_wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Etna";
+    src: url("../../public/etna-font.otf") format('opentype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .3;
+    }
+}
+
+.skeleton-pulse {
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {}

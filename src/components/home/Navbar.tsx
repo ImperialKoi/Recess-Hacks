@@ -109,7 +109,7 @@ const Navbar = () => {
             ))}
             <NavbarButton 
               variant="primary" 
-              href="#contact" 
+              href="/login" 
               className="w-full mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >

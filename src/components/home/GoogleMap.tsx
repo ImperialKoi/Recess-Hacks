@@ -1,41 +1,64 @@
 import React from 'react';
-import { Timer } from 'lucide-react';
-import Map from './Map';
+import { Card, CardContent } from '@/components/ui/card';
+import { MapPin } from 'lucide-react';
 
-// First, make a google cloud account
-// Go into https://console.cloud.google.com/apis/library and install javascript map
-// Make a new api key and restrict it to that
-// Make a billing account
-
-function App() {
-  const waterloo = { lat: 43.47273, lng: -80.54046 };
-
+const LocationMap = () => {
   return (
     <section id='location'>
-        <div className="min-h-screen bg-transparent p-8 py-32">
-        <div className="max-w-6xl mx-auto">
-            <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-4">
-                <h1 className="text-4xl font-bold text-black">Join Us</h1>
-            </div>
-            <h2 className="text-2xl font-semibold text-black">Augest Date, 2025</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-purple-200 p-6 rounded-lg shadow-lg">
-                <Map center={waterloo} zoom={17} />
+        <div className="w-full rounded-xl overflow-hidden text-black bg-transparent p-6 md:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+            <Card className="overflow-hidden border-sm shadow-xl">
+                <CardContent className="p-0">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.704498383707!2d-80.54399518452214!3d43.47229767912818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4f3c9ffb8c7%3A0xee2bdca958266095!2sEngineering%207%20(E7)%2C%20University%20of%20Waterloo!5e0!3m2!1sen!2sca!4v1713819329921!5m2!1sen!2sca" 
+                    width="100%" 
+                    height="400" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={false} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Hackathon Location Map"
+                    className="w-full"
+                ></iframe>
+                </CardContent>
+            </Card>
             </div>
             
-            <div className="bg-purple-200 p-6 rounded-lg shadow-lg">
-                <p className="text-black text-lg leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur, mauris ac malesuada venenatis, ex nunc sollicitudin nunc, ac aliquet nunc augue ac velit. Nam nec ante et massa porta tempor. Vivamus placerat urna sed augue pharetra rhoncus. Quisque et imperdiet ex, ut dignissim magna. Sed ut convallis ligula, in interdum enim. Vivamus ac leo arcu. Cras semper elementum diam, quis commodo risus suscipit vitae. Morbi fringilla placerat euismod. Morbi nec efficitur nibh. Aliquam erat volutpat. Aliquam iaculis maximus leo. Maecenas et sollicitudin diam, id elementum nibh. Fusce consectetur lorem ipsum, ac elementum velit ullamcorper at. Quisque orci justo, scelerisque ut metus ac, dapibus consectetur velit.
+            <div className="order-1 md:order-2">
+            <div className="flex justify-center mb-6">
+                <div className="flex items-center space-x-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-black font-mono">
+                    Join Us
+                </h2>
+                </div>
+            </div>
+            
+            <h3 className="text-2xl font-bold mb-4 text-center">
+                Augest Date
+            </h3>
+            
+            <div className="bg-purple-300/30 p-4 ml-4 rounded-lg mb-4 flex items-start gap-3">
+                <MapPin className="text-black mt-1 flex-shrink-0" />
+                <p className="text-lg">
+                <span className="font-bold">Engineering 7 (E7)</span><br />
+                University of Waterloo
+                200 University Ave W | Waterloo, ON N2L 3G1
                 </p>
             </div>
+            
+            <p className="text-black/90 leading-relaxed pl-4">
+                The University of Waterloo continues to support RecessHacks, building the next generation of innovators, 
+                entrepreneurs, and creators. Step into Canada's largest engineering school — a pipeline for
+                engineering talent for the world's leading companies.
+                Ranked among the top 50 engineering schools globally, the school's reputation for excellence is built
+                on the foundation of co-op education and a bold history of innovation.
+            </p>
             </div>
         </div>
         </div>
     </section>
   );
-}
+};
 
-export default App;
+export default LocationMap;

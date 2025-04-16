@@ -3,15 +3,13 @@
 import { encodeBase32LowerCaseNoPadding } from "@oslojs/encoding";
 import { db } from "@/lib/database";
 import { createEmailUser, CreateEmailUserRow, updateDBUserPassword } from "@/lib/sqlc/auth_sql";
-import { hash } from "@node-rs/argon2";
+import bcrypt from "bcryptjs"; // <-- Import bcrypt
+
+const SALT_ROUNDS = 10;
 
 export async function hashPassword(password: string): Promise<string> {
-    return await hash(password, {
-        memoryCost: 19456,
-        timeCost: 2,
-        outputLen: 32,
-        parallelism: 1,
-    });
+    const salt = await bcrypt.genSalt(10);
+    return await bcrypt.hash(password, salt);
 }
 
 interface userData {
@@ -46,7 +44,6 @@ const updateUserPassword = async (userId: number, password: string): Promise<voi
         password: hashedPassword
     });
 };
-
 
 export async function generateSessionToken(): Promise<string> {
     const bytes = new Uint8Array(24);
