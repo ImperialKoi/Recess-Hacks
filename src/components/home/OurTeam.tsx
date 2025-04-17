@@ -10,7 +10,7 @@ const teamMembers = [
   { name: "Joanna Lau", image: `${Joanna}`, description: "President" },
   { name: "Daniel Zhu", image: `${DanielZ}`, description: "Co President" },
   { name: "Alan Liu", image: `${Alan}`, description: "Exec" },
-  { name: "Daniel Lee", image: `${Jeremy}`, description: "Exec" },
+  { name: "Jeremy Dong", image: `${Jeremy}`, description: "Exec" },
   { name: "Henry Yang", image: `${Henry}`, description: "Exec" },
   { name: "Jason Kim", image: "https://i.imgur.com/181920.jpg", description: "Exec" },
   { name: "Kevin Nguyen", image: "https://i.imgur.com/212223.jpg", description: "Exec" },
