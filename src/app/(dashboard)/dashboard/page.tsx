@@ -1,6 +1,6 @@
-import DashboardSkeleton from "@/components/DashboardSkeleton";
+import DashboardSkeleton from "@/components/dashboard/DashboardSkeleton";
 import { Suspense } from "react";
-import DashboardHome from "@/components/ui/DashboardHome";
+import DashboardHome from "@/pages/Hacker/Dashboard";
 
 export default async function Dashboard() {
     return (

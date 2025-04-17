@@ -1,8 +1,8 @@
 import { cookies } from "next/headers";
 import { authorizeSession } from "@/lib/sessions";
-import { DashboardProvider } from "@/components/DashboardProvider";
-import { DashboardNav } from "@/components/DashboardNav";
-import { Toaster } from "@/components/Toaster";
+import { DashboardProvider } from "@/components/dashboard/DashboardProvider";
+import { DashboardNav } from "@/components/dashboard/DashboardNav";
+import { Toaster } from "@/hooks/Toaster";
 import { getApplicationStatus, getRsvpStatus } from "@/lib/sqlc/application_sql";
 import { db } from "@/lib/database";
 

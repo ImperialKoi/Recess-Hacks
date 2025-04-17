@@ -1,4 +1,4 @@
-import AdminDashboardTabs from "@/components/AdminDashboardTabs";
+import AdminDashboardTabs from "@/pages/Admin/AdminDashboardTabs";
 import { cookies } from "next/headers";
 import { authorizeSession } from "@/lib/sessions";
 import { redirect } from "next/navigation";

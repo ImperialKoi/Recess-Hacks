@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { binarize, Decoder, Detector, grayscale } from "@nuintun/qrcode";
 import Webcam from "react-webcam";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/Select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/application/Select";
 import { toast } from "@/hooks/use-toast";
 import Link from "next/link";
 import {
@@ -27,22 +27,21 @@ const decodeQRCode = (dataURL: string): Promise<string | null> => {
 
             const luminances = grayscale(context.getImageData(0, 0, width, height));
             const binarized = binarize(luminances, width, height);
+            
             const detector = new Detector();
-            const detected = detector.detect(binarized);
+            const detectedGenerator = detector.detect(binarized); // This is a generator
             const decoder = new Decoder();
 
-            let current = detected.next();
-            while (!current.done) {
-                const detect = current.value;
+            for (const detected of detectedGenerator) {
                 try {
-                    const decoded = decoder.decode(detect.matrix);
+                    const decoded = decoder.decode(detected.matrix);
                     resolve(decoded.content);
                     return;
-                } catch {
+                } catch (e) {
                     console.log("Failed to decode QR code.");
                 }
-                current = detected.next();
             }
+
             resolve(null);
         };
 

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
-import AdminStats from "@/components/AdminStats";
-import AdminStatsSkeleton from "@/components/AdminStatsSkeleton";
-import AdminGraphs from "@/components/AdminGraphs";
+import AdminStats from "@/pages/Admin/AdminStats";
+import AdminStatsSkeleton from "@/pages/Admin/AdminStatsSkeleton";
+import AdminGraphs from "@/pages/Admin/AdminGraphs";
 
 export default async function AdminOverview() {
     return (

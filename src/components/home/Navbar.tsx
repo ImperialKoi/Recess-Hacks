@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import logo from '/logo.png'
 
 interface NavbarProps {
   children?: ReactNode;
@@ -80,7 +81,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <NavBody visible={visible}>
-          <NavbarLogo />
+          <NavbarLogo isScrolled={isScrolled} />
           <NavItems items={navItems} className="text-slate-700" />
           <NavbarButton variant="primary" href="/login" className="overflow-hidden">
             Get Started
@@ -89,7 +90,7 @@ const Navbar = () => {
 
         <MobileNav visible={visible}>
           <MobileNavHeader>
-            <NavbarLogo />
+            <NavbarLogo isScrolled={isScrolled} />
             <MobileNavToggle 
               isOpen={isMobileMenuOpen} 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
@@ -266,15 +267,32 @@ const MobileNavToggle = ({
   );
 };
 
-const NavbarLogo = () => {
+const NavbarLogo = ({ isScrolled }: { isScrolled?: boolean }) => {
   return (
     <a
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal"
     >
-      <span className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent hover:scale-110">
-        Recess Hacks 5.0
-      </span>
+      {isScrolled ? (
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          className="flex items-center justify-center h-10 rounded-full font-bold text-xl"
+        >
+          <img src={logo} alt="logo" className="w-10 mr-6 hover:scale-110" />
+          <h3 className="bg-gradient-to-r from-hackathon-blue to-hackathon-purple inline-block text-transparent bg-clip-text text-2xl hover:scale-110">RH 5.0</h3>
+        </motion.div>
+      ) : (
+        <motion.span 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent hover:scale-110"
+        >
+          Recess Hacks 5.0
+        </motion.span>
+      )}
     </a>
   );
 };

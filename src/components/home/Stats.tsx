@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 const stats = [
   { value: 189, label: "in prizes", prefix: "$", suffix: "K+" },
@@ -42,22 +43,26 @@ const Statistics = () => {
   return (
     <section className="py-20 bg-transparent text-purple-900" id='stats'>
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl font-bold text-center mb-20">
-          Last year, we had...
-        </h2>
+        <ScrollReveal delay={0}>
+          <h2 className="text-6xl font-bold text-center mb-20">
+            Last year, we had...
+          </h2>
+        </ScrollReveal>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-20">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center transform transition-transform duration-500 hover:scale-110"
-            >
-              <div className="text-3xl md:text-5xl font-bold mb-2">
-                {stat.prefix}{stat.value}{stat.suffix}
-              </div>
-              <div className="text-xl opacity-80">{stat.label}</div>
-            </div>
-          ))}
+            {stats.map((stat, index) => (
+              <ScrollReveal delay={index*150}>
+                <div
+                  key={index}
+                  className="text-center transform transition-transform duration-500 hover:scale-110"
+                >
+                  <div className="text-3xl md:text-5xl font-bold mb-2">
+                    {stat.prefix}{stat.value}{stat.suffix}
+                  </div>
+                  <div className="text-xl opacity-80">{stat.label}</div>
+                </div>
+              </ScrollReveal>
+            ))}
         </div>
 
         <div ref={containerRef} className="relative overflow-hidden">

@@ -1,6 +1,6 @@
-import ApplicationsTable from "@/components/ApplicationsTable";
+import ApplicationsTable from "@/components/application/ApplicationsTable";
 import { Suspense } from "react";
-import ApplicationTableSkeleton from "@/components/ApplicationTableSkeleton";
+import ApplicationTableSkeleton from "@/components/application/ApplicationTableSkeleton";
 
 export const dynamic = "force-dynamic";
 

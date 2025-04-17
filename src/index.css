@@ -3,6 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Lower Y position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Normal Y position */
+  }
+}
+
 @layer base {
   :root {
     --background: 250 95% 98%;
@@ -127,4 +138,30 @@ html {
     rgba(0, 0, 0, 1) 90%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element.delay-100 {
+  animation-delay: 2s;
+}
+
+.floating-element.delay-200 {
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }

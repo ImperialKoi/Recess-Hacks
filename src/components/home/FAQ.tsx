@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 const faqItems = [
   {
@@ -49,19 +50,20 @@ const FAQ = () => {
     <section id="faq" className="py-12 md:py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-          <p className="text-lg text-foreground/80">
-            Have questions about Recess Hacks? We've got answers! If you don't find what you're looking for, feel free to contact us.
-          </p>
+          <ScrollReveal delay={50}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+          </ScrollReveal>
+          <ScrollReveal delay={200}>
+            <p className="text-lg text-foreground/80">
+              Have questions about Recess Hacks? We've got answers! If you don't find what you're looking for, feel free to contact us.
+            </p>
+          </ScrollReveal>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap gap-4">
             {faqItems.map((item, index) => (
-              <div 
-                key={index} 
-                className="w-full md:w-[calc(50%-0.5rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 relative"
-              >
+              <ScrollReveal delay={(index + 1) * 150} className="w-full md:w-[calc(50%-0.5rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 relative">
                 <Accordion type="single" collapsible className="h-full">
                   <AccordionItem 
                     value={`item-${index}`}
@@ -75,7 +77,7 @@ const FAQ = () => {
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

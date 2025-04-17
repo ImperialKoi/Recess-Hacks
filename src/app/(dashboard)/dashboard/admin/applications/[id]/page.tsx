@@ -2,12 +2,12 @@ import { Icon } from "@iconify/react";
 import { getApplicationById } from "@/lib/sqlc/admin_sql";
 import { db } from "@/lib/database";
 import { redirect, useSearchParams } from "next/navigation";
-import StatusBadge from "@/components/StatusBadge";
-import ApplicationItem from "@/components/ApplicationItem";
-import ApplicationLinkBox from "@/components/ApplicationLinkBox";
-import { ApplicationActionsForm } from "@/components/ApplicationActionsForm";
+import StatusBadge from "@/components/dashboard/StatusBadge";
+import ApplicationItem from "@/components/application/ApplicationItem";
+import ApplicationLinkBox from "@/components/application/ApplicationLinkBox";
+import { ApplicationActionsForm } from "@/components/application/ApplicationActionsForm";
 import { headers } from "next/headers";
-import BackButton from "@/components/BackButton";
+import BackButton from "@/components/application/BackButton";
 
 const formatTimeAgo = (date: Date) => {
     const now = new Date();
