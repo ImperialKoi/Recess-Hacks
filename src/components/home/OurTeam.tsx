@@ -3,12 +3,13 @@ import { Heart } from 'lucide-react';
 import Joanna from '/Joanna.jpg'
 import DanielZ from '/DanielZ.jpg'
 import Alan from '/Alan.jpg'
+import Jeremy from '/Jeremy.jpg'
 
 const teamMembers = [
   { name: "Joanna Lau", image: `${Joanna}`, description: "President" },
   { name: "Daniel Zhu", image: `${DanielZ}`, description: "Co President" },
   { name: "Alan Liu", image: `${Alan}`, description: "Exec" },
-  { name: "Daniel Lee", image: "https://i.imgur.com/121314.jpg", description: "Exec" },
+  { name: "Daniel Lee", image: `${Jeremy}`, description: "Exec" },
   { name: "Emily Zhang", image: "https://i.imgur.com/151617.jpg", description: "Exec" },
   { name: "Jason Kim", image: "https://i.imgur.com/181920.jpg", description: "Exec" },
   { name: "Kevin Nguyen", image: "https://i.imgur.com/212223.jpg", description: "Exec" },
