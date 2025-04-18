@@ -280,7 +280,7 @@ const NavbarLogo = ({ isScrolled }: { isScrolled?: boolean }) => {
           transition={{ duration: 0.3 }}
           className="flex items-center justify-center h-10 rounded-full font-bold text-xl"
         >
-          <img src={logo} alt="logo" className="w-10 mr-6 hover:scale-110" />
+          <img src={logo} alt="logo" className="w-10 mr-6 transition-transform duration-200 hover:scale-110" />
           <h3 className="bg-gradient-to-r from-hackathon-blue to-hackathon-purple inline-block text-transparent bg-clip-text text-2xl hover:scale-110">RH 5.0</h3>
         </motion.div>
       ) : (
@@ -288,7 +288,7 @@ const NavbarLogo = ({ isScrolled }: { isScrolled?: boolean }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent hover:scale-110"
+          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent transition-transform duration-200 hover:scale-110"
         >
           Recess Hacks 5.0
         </motion.span>

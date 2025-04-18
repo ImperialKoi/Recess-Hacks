@@ -5,8 +5,7 @@ const stats = [
   { value: 189, label: "in prizes", prefix: "$", suffix: "K+" },
   { value: 190, label: "hackers", suffix: "+" },
   { value: 30, label: "projects", suffix: "+" },
-  { value: 40, label: "schools", suffix: "+" },
-  { value: 15, label: "workshops", suffix: "+" }
+  { value: 9, label: "countries", suffix: "+" },
 ];
 
 const images = [
@@ -49,7 +48,7 @@ const Statistics = () => {
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20">
             {stats.map((stat, index) => (
               <ScrollReveal delay={index*150}>
                 <div

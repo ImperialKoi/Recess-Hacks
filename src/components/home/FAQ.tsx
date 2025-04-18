@@ -40,6 +40,10 @@ const faqItems = [
     answer: "Projects will be evaluated based on criteria such as innovation, technical complexity, design, functionality, and presentation. Our panel of judges will include industry professionals and educators in the tech field."
   },
   {
+    question: "Will this hackathon be hosted virtually?",
+    answer: "No, this year our hackathon will be hosted entirely in person."
+  },
+  {
     question: "I have a question that's not answered here!",
     answer: "Feel free to reach out to us at team@recesshacks.com or message us on Instagram @recesshacks. We're happy to help!"
   }
