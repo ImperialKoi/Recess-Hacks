@@ -26,8 +26,8 @@ const Index = () => {
         <main className="flex-grow bg-gradient-to-b from-purple-100 to-blue-100 min-w-screen">
           <Hero />
           <About />
-          <Logistics />
-          <Maps />
+          {/* <Logistics /> */}
+          {/* <Maps /> */}
           <Stats />
           <Sponsors />
           <FAQ />

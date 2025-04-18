@@ -64,13 +64,13 @@ const Statistics = () => {
             ))}
         </div>
 
-        <div ref={containerRef} className="relative overflow-hidden">
+        {/* <div ref={containerRef} className="relative overflow-hidden">
           <div 
             ref={scrollRef}
             className="flex gap-4 overflow-x-hidden w-full"
-          >
+          > */}
             {/* Triple the images to ensure smooth transition */}
-            {[...images, ...images, ...images].map((image, index) => (
+            {/* {[...images, ...images, ...images].map((image, index) => (
               <div
                 key={index}
                 className="flex-none w-[300px] h-[200px] rounded-lg overflow-hidden"
@@ -83,7 +83,7 @@ const Statistics = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

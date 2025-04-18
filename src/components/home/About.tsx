@@ -1,5 +1,5 @@
 import { Lightbulb, Code, Rocket, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import img1 from '/img1.jpg';
 import img2 from '/img2.jpeg';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -8,17 +8,66 @@ const images = [img1, img2];
 
 const About = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef<number | null>(null);
+
+  const startAutoScroll = () => {
+    if (intervalRef.current !== null) return;
+    
+    intervalRef.current = window.setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+  };
+
+  const stopAutoScroll = () => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    // Start auto-scrolling when component mounts
+    if (!isPaused) {
+      startAutoScroll();
+    }
+    
+    // Clean up the interval when component unmounts
+    return () => {
+      stopAutoScroll();
+    };
+  }, [isPaused]);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
+    
+    // Reset the timer when user manually changes slides
+    stopAutoScroll();
+    startAutoScroll();
   };
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
+    
+    // Reset the timer when user manually changes slides
+    stopAutoScroll();
+    startAutoScroll();
+  };
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    stopAutoScroll();
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    startAutoScroll();
   };
 
   return (
@@ -35,7 +84,7 @@ const About = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <div className="relative w-[18rem] md:w-[40rem] h-[20rem] md:h-[26rem] aspect-video rounded-xl overflow-hidden shadow-lg md:ml-28">
+            <div className="relative w-[18rem] md:w-[40rem] h-[20rem] md:h-[26rem] aspect-video rounded-xl overflow-hidden shadow-lg md:ml-28" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               {images.map((image, index) => (
                 <div
                   key={index}
@@ -69,7 +118,12 @@ const About = () => {
                 {images.map((_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentIndex(index)}
+                    onClick={() => {
+                      setCurrentIndex(index);
+                      // Reset timer when user selects a specific slide
+                      stopAutoScroll();
+                      startAutoScroll();
+                    }}
                     className={`w-2 h-2 rounded-full transition-all ${
                       index === currentIndex
                         ? 'bg-white w-4'
@@ -121,7 +175,7 @@ const About = () => {
           </ScrollReveal>
         </div>
 
-        <ScrollReveal delay={800}>
+        {/* <ScrollReveal delay={800}>
           <div className="mt-20 rounded-2xl p-8 md:p-12">
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
@@ -137,7 +191,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
       </div>
     </section>
   );
