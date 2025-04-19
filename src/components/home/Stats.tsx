@@ -50,7 +50,7 @@ const Statistics = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20">
             {stats.map((stat, index) => (
-              <ScrollReveal delay={index*150}>
+              <ScrollReveal delay={index*150} key={index}>
                 <div
                   key={index}
                   className="text-center transform transition-transform duration-500 hover:scale-110"

@@ -67,7 +67,7 @@ const FAQ = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap gap-4">
             {faqItems.map((item, index) => (
-              <ScrollReveal delay={(index + 1) * 150} className="w-full md:w-[calc(50%-0.5rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 relative">
+              <ScrollReveal delay={(index + 1) * 150} key={index} className="w-full md:w-[calc(50%-0.5rem)] transition-all duration-500 ease-in-out hover:-translate-y-2 relative">
                 <Accordion type="single" collapsible className="h-full">
                   <AccordionItem 
                     value={`item-${index}`}

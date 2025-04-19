@@ -5,8 +5,6 @@ import { db } from "@/lib/database";
 import { createEmailUser, CreateEmailUserRow, updateDBUserPassword } from "@/lib/sqlc/auth_sql";
 import bcrypt from "bcryptjs"; // <-- Import bcrypt
 
-const SALT_ROUNDS = 10;
-
 export async function hashPassword(password: string): Promise<string> {
     const salt = await bcrypt.genSalt(10);
     return await bcrypt.hash(password, salt);

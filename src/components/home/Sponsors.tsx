@@ -36,7 +36,7 @@ const Sponsors = () => {
           {/* Platinum Sponsors */}
           <div>
             <ScrollReveal delay={0}>
-              <h3 className="text-lg text-center mb-8 text-black max-w-4xl ml-60">Become a part of Canada's premier high school hackathon. Your support helps inspire the next generation of innovators and leaders in technology. Looking to make an impact? Email us at <span className='text-blue-600'>sponsorships@recesshacks.ca</span>.</h3>
+              <h3 className="text-lg text-center mb-8 text-black max-w-4xl mx-auto">Become a part of Canada's premier high school hackathon. Your support helps inspire the next generation of innovators and leaders in technology. Looking to make an impact? Email us at <span className='text-blue-600'>sponsorships@recesshacks.ca</span>.</h3>
             </ScrollReveal>
             <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
               {sponsors
