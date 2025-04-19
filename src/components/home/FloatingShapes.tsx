@@ -8,9 +8,19 @@ interface Shape {
   floatSpeed: number;
   opacity: number;
   rotation: number;
-  type: "circle" | "square" | "triangle";
+  type: "bubble-tea" | "laptop" | "chips";
   direction: { x: number; y: number };
 }
+
+const images = {
+  "bubble-tea": new Image(),
+  "laptop": new Image(),
+  "chips": new Image(),
+};
+
+images["bubble-tea"].src = "/bubble-tea.png";
+images["laptop"].src = "/laptop.png";
+images["chips"].src = "/chips.png";
 
 const FloatingShapes = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -37,16 +47,16 @@ const FloatingShapes = () => {
     const generateShapes = () => {
       const shapes: Shape[] = [];
       const totalShapes = 30;
-      const shapeTypes: Array<"circle" | "square" | "triangle"> = ["circle", "square", "triangle"];
+      const shapeTypes: Array<"bubble-tea" | "laptop" | "chips"> = ["bubble-tea", "laptop", "chips"];
       
       for (let i = 0; i < totalShapes; i++) {
         shapes.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: 20 + Math.random() * 60, // Sizes between 20px and 80px
+          size: 100 + Math.random() * 60, // Sizes between 20px and 80px
           rotationSpeed: (Math.random() - 0.5) * 0.01,
           floatSpeed: 0.2 - Math.random() * 0.1,
-          opacity: 0.05 + Math.random() * 0.15, // Opacity between 0.05 and 0.2
+          opacity: 0.2 + Math.random() * 0.5, // Opacity between 0.05 and 0.2
           rotation: Math.random() * Math.PI * 2,
           type: shapeTypes[Math.floor(Math.random() * shapeTypes.length)],
           direction: {
@@ -71,24 +81,34 @@ const FloatingShapes = () => {
       ctx.rotate(shape.rotation);
       
       switch (shape.type) {
-        case "circle":
-          ctx.beginPath();
-          ctx.arc(0, 0, shape.size / 2, 0, Math.PI * 2);
-          ctx.fill();
+        case "bubble-tea":
+        case "laptop":
+        case "chips":
+          const img = images[shape.type];
+          if (img.complete) {
+            ctx.drawImage(
+              img,
+              -shape.size / 2,
+              -shape.size / 2,
+              shape.size,
+              shape.size
+            );
+          } else {
+            img.onload = () => {
+              ctx.drawImage(
+                img,
+                -shape.size / 2,
+                -shape.size / 2,
+                shape.size,
+                shape.size
+              );
+            };
+          }
           break;
-          
-        case "square":
-          ctx.fillRect(-shape.size / 2, -shape.size / 2, shape.size, shape.size);
-          break;
-          
-        case "triangle":
-          ctx.beginPath();
-          ctx.moveTo(0, -shape.size / 2);
-          ctx.lineTo(shape.size / 2, shape.size / 2);
-          ctx.lineTo(-shape.size / 2, shape.size / 2);
-          ctx.closePath();
-          ctx.fill();
-          break;
+      
+        default:
+          // Optional: fallback or unknown shape type
+          console.warn(`Unknown shape type: ${shape.type}`);
       }
       
       ctx.restore();
@@ -137,7 +157,7 @@ const FloatingShapes = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="absolute inset-0 z-10 pointer-events-none overflow-hidden"
+      className="absolute inset-0 z-0 pointer-events-none overflow-hidden"
     />
   );
 };
