@@ -7,6 +7,8 @@ import Jeremy from '/team/Jeremy.jpg'
 import Henry from '/team/Henry.jpg'
 import Angelina from '/team/Angelina.jpg'
 import Sowmya from '/team/Sowmya.jpg'
+import Daniel from '/team/Daniel.jpg'
+import Richard from '/team/Richard.jpg'
 
 const teamMembers = [
   { name: "Joanna Lau", image: `${Joanna}`, description: "President" },
@@ -16,8 +18,8 @@ const teamMembers = [
   { name: "Henry Yang", image: `${Henry}`, description: "Exec" },
   { name: "Angelina Jiang", image: `${Angelina}`, description: "Exec" },
   { name: "Sowmya Ramanan", image: `${Sowmya}`, description: "Exec" },
-  { name: "Daniel Xu", image: "https://i.imgur.com/242526.jpg", description: "Web Dev" },
-  { name: "TEE HEE", image: "https://i.imgur.com/238474.jpg", description: "President" },
+  { name: "Daniel Xu", image: `${Daniel}`, description: "Web Dev" },
+  { name: "Richard", image: `${Richard}`, description: "Exec" },
 ];
 
 function App() {

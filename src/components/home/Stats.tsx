@@ -4,7 +4,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 const stats = [
   { value: 189, label: "in prizes", prefix: "$", suffix: "K+" },
   { value: 190, label: "hackers", suffix: "+" },
-  { value: 30, label: "projects", suffix: "+" },
+  { value: 25, label: "projects", suffix: "+" },
   { value: 9, label: "countries", suffix: "+" },
 ];
 

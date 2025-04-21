@@ -78,8 +78,17 @@ const About = () => {
             <div className="max-w-2xl mb-16 text-left left-[3rem] bg-white p-12 rounded-xl">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">About Recess Hacks</h2>
               <p className="text-lg text-foreground/80">
-                Recess Hacks 4.0 is a 48-hour event on August 30th-September 1st (labour day weekend) where students participate in teams of 1-4 and work together to build innovative projects. Participants will have access to workshops, win fun prizes, learn new skills and – most importantly – have a fun time! Recess Hacks was founded in 2021, making this our 4th iteration. In the past few years, we've had over 500 participants, 20+ sponsors and multiple dedicated teams. We are a Canadian-based hackathon but will also be allowing international participants this year. Any highschooler is eligible to apply!
+              Recess Hacks 5.0 is our first-ever in-person hackathon, running from August 30 to September 1 over Labour Day Weekend! Open to all high school students, participants can join solo or in teams of up to 4 to build innovative projects, attend workshops, win prizes, and most importantly—have fun! While we’re proudly based in Canada, this year we’re also welcoming international participants. Founded in 2021, Recess Hacks is now celebrating its 5th edition with more excitement than ever!
               </p>
+              <a 
+                className='text-blue-600 flex items-center mt-4 -mb-4 group transition-all duration-300 hover:text-blue-800 w-fit'
+                href='/register'
+              >
+                Apply Now!
+                <ChevronRight
+                  className='ml-4 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300' 
+                />
+              </a>
             </div>
           </ScrollReveal>
 
@@ -145,7 +154,10 @@ const About = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Foster Innovation</h3>
               <p className="text-foreground/70">
-                Introduce young programmers to the newest technology fields. Cultivate a collaborative environment that encourages creativity, critical thinking, and problem-solving, helping students to develop solutions that can make a real impact.
+              Cultivate a collaborative environment that
+encourages creativity, critical thinking, and
+problem-solving, helping students to develop
+solutions that can make a real impact.
               </p>
             </div>
           </ScrollReveal>
@@ -157,7 +169,9 @@ const About = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Inspire the Next Generation</h3>
               <p className="text-foreground/70">
-                Ignite a passion for technology and programming in students, inspiring them to pursue further education and careers in STEM fields.
+              Ignite a passion for technology and programming
+in students, inspiring them to pursue further
+education and careers in STEM fields.
               </p>
             </div>
           </ScrollReveal>
@@ -167,9 +181,13 @@ const About = () => {
               <div className="rounded-full bg-hackathon-orange/10 p-3 w-fit mb-4">
                 <Code className="text-hackathon-orange h-6 w-6" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Improve Programming Skills</h3>
+              <h3 className="text-xl font-bold mb-3">Develope Skills For The Future</h3>
               <p className="text-foreground/70">
-                Help high school students of all skill levels to improve their programming skills through hands-on experience, workshops, and mentorship from industry experts.
+              Help high school students of all skill levels to
+improve their programming, engineering and
+critical thinking skills through hands-on
+experience, workshops, and mentorship from
+industry experts.
               </p>
             </div>
           </ScrollReveal>
