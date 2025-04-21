@@ -19,7 +19,7 @@ const teamMembers = [
   { name: "Angelina Jiang", image: `${Angelina}`, description: "Exec" },
   { name: "Sowmya Ramanan", image: `${Sowmya}`, description: "Exec" },
   { name: "Daniel Xu", image: `${Daniel}`, description: "Web Dev" },
-  { name: "Richard", image: `${Richard}`, description: "Exec" },
+  { name: "Richard Tuo", image: `${Richard}`, description: "Exec" },
 ];
 
 function App() {
