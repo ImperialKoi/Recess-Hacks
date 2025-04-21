@@ -70,6 +70,9 @@ export default {
 					blue: '#3B82F6',
 					'blue-light': '#60A5FA',
 					'blue-dark': '#2563EB',
+					orange: '#fa760a',
+					darkorange: '#ff7300',
+					yellow: '#fdbf00'
 				}
 			},
 			borderRadius: {

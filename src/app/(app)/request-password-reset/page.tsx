@@ -1,4 +1,4 @@
-import RequestPasswordResetForm from "@/components/RequestPasswordResetForm";
+import RequestPasswordResetForm from "@/components/login/RequestPasswordResetForm";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { validateSessionToken } from "@/lib/sessions";

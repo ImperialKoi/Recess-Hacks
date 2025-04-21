@@ -23,7 +23,7 @@ const Index = () => {
       <FloatingShapes />
       <div className="min-h-screen flex flex-col z-10 overflow-hidden">
         <Navbar />
-        <main className="flex-grow bg-gradient-to-b from-purple-100 to-blue-100 min-w-screen">
+        <main className="flex-grow bg-gradient-to-b from-orange-200 to-yellow-100 min-w-screen">
           <Hero />
           <About />
           {/* <Logistics /> */}

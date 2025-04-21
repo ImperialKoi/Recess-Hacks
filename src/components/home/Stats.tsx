@@ -40,7 +40,7 @@ const Statistics = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-transparent text-purple-900" id='stats'>
+    <section className="py-20 bg-transparent text-orange-500" id='stats'>
       <div className="container mx-auto px-4">
         <ScrollReveal delay={0}>
           <h2 className="text-6xl font-bold text-center mb-20">

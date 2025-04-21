@@ -18,9 +18,9 @@ const images = {
   "chips": new Image(),
 };
 
-images["bubble-tea"].src = "/bubble-tea.png";
-images["laptop"].src = "/laptop.png";
-images["chips"].src = "/chips.png";
+images["bubble-tea"].src = "/background/bubble-tea.png";
+images["laptop"].src = "/background/laptop.png";
+images["chips"].src = "/background/chips.png";
 
 const FloatingShapes = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);

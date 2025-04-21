@@ -1,7 +1,7 @@
 import { getEmailByPasswordResetTokenID, getEmailByVerificationTokenID } from "@/lib/sqlc/auth_sql";
 import { db } from "@/lib/database";
 import { redirect } from "next/navigation";
-import { ResendEmailForm } from "@/components/ResendEmailForm";
+import { ResendEmailForm } from "@/components/login/ResendEmailForm";
 
 export const dynamic = "force-dynamic";
 

@@ -1,4 +1,4 @@
-import RegistrationForm from "@/components/RegistrationForm";
+import RegistrationForm from "@/pages/RegistrationForm";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { validateSessionToken } from "@/lib/sessions";

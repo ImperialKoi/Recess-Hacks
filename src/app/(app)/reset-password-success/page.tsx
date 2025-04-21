@@ -4,7 +4,7 @@ import Link from "next/link";
 import {
     getPasswordResetTokenByToken,
 } from "@/lib/sqlc/auth_sql";
-import PasswordResetForm from "@/components/PasswordResetForm";
+import PasswordResetForm from "@/components/login/PasswordResetForm";
 
 export const dynamic = "force-dynamic";
 

@@ -28,7 +28,7 @@ const events: TimelineEvent[] = [
     type: 'main',
   },
   {
-    title: 'Intro to Web Development',
+    title: 'Introduction to Web Development',
     time: '7:00 PM',
     date: 'August 30, 2024',
     description: 'Learn the basics of HTML, CSS, and JavaScript to build your first web application.',
@@ -100,21 +100,21 @@ const Timeline = () => {
     : events.filter(event => event.type === filter);
 
   const typeColors = {
-    main: 'bg-hackathon-purple text-white',
-    workshop: 'bg-hackathon-blue text-white',
-    activity: 'bg-purple-300 text-purple-900',
+    main: 'bg-hackathon-orange text-white',
+    workshop: 'bg-hackathon-yellow text-black',
+    activity: 'bg-orange-300 text-orange-900',
     deadline: 'bg-red-500 text-white',
   };
 
   const typeBorderColors = {
-    main: 'border-hackathon-purple',
-    workshop: 'border-hackathon-blue',
-    activity: 'border-purple-300',
+    main: 'border-hackathon-orange',
+    workshop: 'border-hackathon-yellow',
+    activity: 'border-orange-300',
     deadline: 'border-red-500',
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-orange-100">
       <Navbar />
         <div>
           <section id="timeline" className="py-20 md:py-32 bg-transparent">
@@ -131,7 +131,7 @@ const Timeline = () => {
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                       filter === 'all' 
-                        ? "bg-hackathon-purple text-white" 
+                        ? "bg-hackathon-orange text-white" 
                         : "bg-muted text-foreground/70 hover:bg-muted/80"
                     )}
                   >
@@ -142,7 +142,7 @@ const Timeline = () => {
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                       filter === 'main' 
-                        ? "bg-hackathon-purple text-white" 
+                        ? "bg-hackathon-orange text-white" 
                         : "bg-muted text-foreground/70 hover:bg-muted/80"
                     )}
                   >
@@ -153,7 +153,7 @@ const Timeline = () => {
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                       filter === 'workshop' 
-                        ? "bg-hackathon-blue text-white" 
+                        ? "bg-hackathon-yellow text-black" 
                         : "bg-muted text-foreground/70 hover:bg-muted/80"
                     )}
                   >
@@ -164,7 +164,7 @@ const Timeline = () => {
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-colors",
                       filter === 'activity' 
-                        ? "bg-purple-300 text-purple-900" 
+                        ? "bg-orange-300 text-orange-900" 
                         : "bg-muted text-foreground/70 hover:bg-muted/80"
                     )}
                   >

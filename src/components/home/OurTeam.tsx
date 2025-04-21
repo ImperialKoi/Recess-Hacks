@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
-import Joanna from '/Joanna.jpg'
-import DanielZ from '/DanielZ.jpg'
-import Alan from '/Alan.jpg'
-import Jeremy from '/Jeremy.jpg'
-import Henry from '/Henry.jpg'
+import Joanna from '/team/Joanna.jpg'
+import DanielZ from '/team/DanielZ.jpg'
+import Alan from '/team/Alan.jpg'
+import Jeremy from '/team/Jeremy.jpg'
+import Henry from '/team/Henry.jpg'
+import Angelina from '/team/Angelina.jpg'
+import Sowmya from '/team/Sowmya.jpg'
 
 const teamMembers = [
   { name: "Joanna Lau", image: `${Joanna}`, description: "President" },
@@ -12,8 +14,8 @@ const teamMembers = [
   { name: "Alan Liu", image: `${Alan}`, description: "Exec" },
   { name: "Jeremy Dong", image: `${Jeremy}`, description: "Exec" },
   { name: "Henry Yang", image: `${Henry}`, description: "Exec" },
-  { name: "Jason Kim", image: "https://i.imgur.com/181920.jpg", description: "Exec" },
-  { name: "Kevin Nguyen", image: "https://i.imgur.com/212223.jpg", description: "Exec" },
+  { name: "Angelina Jiang", image: `${Angelina}`, description: "Exec" },
+  { name: "Sowmya Ramanan", image: `${Sowmya}`, description: "Exec" },
   { name: "Daniel Xu", image: "https://i.imgur.com/242526.jpg", description: "Web Dev" },
   { name: "TEE HEE", image: "https://i.imgur.com/238474.jpg", description: "President" },
 ];
@@ -73,7 +75,7 @@ function App() {
     : null;
 
   return (
-    <div className="bg-transparent p-8 mb-12">
+    <div className="relative bg-transparent p-8 mb-12 z-20">
       <section id='teams'>
         <div className="container mx-auto">
           <div className="min-h-[8rem]">
@@ -99,7 +101,7 @@ function App() {
                 onMouseEnter={() => setHoveredMember(member.name)}
                 onMouseLeave={() => setHoveredMember(null)}
               >
-                <div className={`aspect-square w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 transition-all duration-300 ${hoveredMember === member.name ? 'border-blue-500 scale-105' : 'border-black'}`}>
+                <div className={`aspect-square w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 transition-all duration-300 ${hoveredMember === member.name ? 'border-orange-500 scale-105' : 'border-black'}`}>
                   <img
                     src={member.image}
                     alt={member.name}

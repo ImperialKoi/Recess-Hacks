@@ -139,9 +139,9 @@ const About = () => {
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 mt-40 mb-40">
           <ScrollReveal delay={350}>
-            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-purple/30 transition-colors h-[22rem] md:h-[17rem]">
-              <div className="rounded-full bg-hackathon-purple/10 p-3 w-fit mb-4">
-                <Rocket className="text-hackathon-purple h-6 w-6" />
+            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-orange/30 transition-colors h-[22rem] md:h-[17rem]">
+              <div className="rounded-full bg-hackathon-orange/10 p-3 w-fit mb-4">
+                <Rocket className="text-hackathon-orange h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">Foster Innovation</h3>
               <p className="text-foreground/70">
@@ -151,9 +151,9 @@ const About = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={500}>
-            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-blue/30 transition-colors h-[20rem] md:h-[17rem]">
-              <div className="rounded-full bg-hackathon-blue/10 p-3 w-fit mb-4">
-                <Lightbulb className="text-hackathon-blue h-6 w-6" />
+            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-yellow/30 transition-colors h-[20rem] md:h-[17rem]">
+              <div className="rounded-full bg-hackathon-yellow/10 p-3 w-fit mb-4">
+                <Lightbulb className="text-hackathon-yellow h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">Inspire the Next Generation</h3>
               <p className="text-foreground/70">
@@ -163,9 +163,9 @@ const About = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={650}>
-            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-purple/30 transition-colors h-[22rem] md:h-[17rem]">
-              <div className="rounded-full bg-hackathon-purple/10 p-3 w-fit mb-4">
-                <Code className="text-hackathon-purple h-6 w-6" />
+            <div className="bg-background rounded-xl p-6 shadow-lg border border-border hover:border-hackathon-orange/30 transition-colors h-[22rem] md:h-[17rem]">
+              <div className="rounded-full bg-hackathon-orange/10 p-3 w-fit mb-4">
+                <Code className="text-hackathon-orange h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-3">Improve Programming Skills</h3>
               <p className="text-foreground/70">

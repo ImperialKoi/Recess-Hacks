@@ -175,7 +175,7 @@ const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-blue-100"
+              className="absolute inset-0 h-full w-full rounded-full bg-orange-300"
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -281,14 +281,14 @@ const NavbarLogo = ({ isScrolled }: { isScrolled?: boolean }) => {
           className="flex items-center justify-center h-10 rounded-full font-bold text-xl"
         >
           <img src={logo} alt="logo" className="w-10 mr-6 transition-transform duration-200 hover:scale-110" />
-          <h3 className="bg-gradient-to-r from-hackathon-blue to-hackathon-purple inline-block text-transparent bg-clip-text text-2xl hover:scale-110">RH 5.0</h3>
+          <h3 className="bg-gradient-to-r from-hackathon-orange to-hackathon-yellow inline-block text-transparent bg-clip-text text-2xl hover:scale-110">RH 5.0</h3>
         </motion.div>
       ) : (
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-purple to-hackathon-blue bg-clip-text text-transparent transition-transform duration-200 hover:scale-110"
+          className="font-bold text-xl md:text-2xl bg-gradient-to-r from-hackathon-orange to-hackathon-yellow bg-clip-text text-transparent transition-transform duration-200 hover:scale-110"
         >
           Recess Hacks 5.0
         </motion.span>
@@ -319,10 +319,10 @@ const NavbarButton = ({
     "px-4 py-2 rounded-md text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
   const variantStyles = {
-    primary: "bg-blue-600 hover:bg-blue-700 text-white shadow-md",
+    primary: "bg-orange-600 hover:bg-orange-700 text-white shadow-md",
     secondary: "bg-transparent shadow-none",
     dark: "bg-black text-white shadow-md",
-    gradient: "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-md",
+    gradient: "bg-gradient-to-b from-orange-500 to-orange-700 text-white shadow-md",
   };
 
   const Comp = Tag as any;

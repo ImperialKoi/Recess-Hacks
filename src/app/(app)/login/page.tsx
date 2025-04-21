@@ -1,4 +1,4 @@
-import LoginForm from "@/components/LoginForm";
+import LoginForm from "@/pages/LoginForm";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { validateSessionToken } from "@/lib/sessions";

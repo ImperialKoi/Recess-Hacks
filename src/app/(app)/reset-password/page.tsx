@@ -4,9 +4,9 @@ import Link from "next/link";
 import {
     getPasswordResetTokenByToken,
 } from "@/lib/sqlc/auth_sql";
-import SetSessionCookie from "@/components/SetSessionCookie";
-import RequestPasswordResetForm from "@/components/RequestPasswordResetForm";
-import PasswordResetForm from "@/components/PasswordResetForm";
+import SetSessionCookie from "@/components/application/SetSessionCookie";
+import RequestPasswordResetForm from "@/components/login/RequestPasswordResetForm";
+import PasswordResetForm from "@/components/login/PasswordResetForm";
 
 export const dynamic = "force-dynamic";
 
