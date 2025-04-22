@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import { Buffer } from 'buffer';
 
 export function encryptAES(secretKey: string, data: string): string {
     if (!secretKey) throw new Error("Missing encryption key");

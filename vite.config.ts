@@ -10,6 +10,12 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    sourcemap: true,
+  },
+  define: {
+    'process.env': {},
+  },
   plugins: [
     inject({
       process: 'process',
