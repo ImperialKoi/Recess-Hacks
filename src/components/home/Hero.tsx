@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <ScrollReveal delay={500} className="flex items-center gap-2 p-3 rounded-lg bg-background/90 border border-border">
               <Calendar className="text-hackathon-orange" size={24} />
-              <span className="font-medium">48 Hours</span>
+              <span className="font-medium">24 Hours</span>
             </ScrollReveal>
             
             <ScrollReveal delay={650} className="flex items-center gap-2 p-3 rounded-lg bg-background/90 border border-border">
